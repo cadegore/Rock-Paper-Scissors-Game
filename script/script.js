@@ -1,5 +1,6 @@
 /* This version of the Rock, Paper, and Scissors Game will only work in the console */
 
+/*
 // userScore keeps track the points the player received
 let userScore = 0;
 
@@ -137,3 +138,100 @@ function checkResult() {
 
 // call the userPlay() function to start the game
 userPlay();
+*/
+
+/* This version follows The Odin Project Instructions, but also simpler */
+
+// keep track of the score the player received
+let playerScore = 0;
+// keep track of the score the computer received
+let computerScore = 0;
+
+// computerPlay() function will let computer randomly choose from the choices list
+function computerPlay() {
+  const choices = ['rock', 'paper', 'scissors'];
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+// playRound() function will compare the player's choice against the computer's choice, and give the corresponding feedback
+function playRound(playerSelection, computerSelection) {
+  // if the player's choice is the same as the computer's choice
+  if (playerSelection === computerSelection) {
+    // print the feedback and current score of both the player and computer to thr console
+    console.log(`It's a tie! Current Score:
+    Player: ${playerScore}
+    Computer: ${computerScore}`);
+  } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+    // add 1 point to the player
+    playerScore++;
+    // print the feedback and current score of both the player and computer to thr console
+    console.log(`You win! Current Score:
+    Player: ${playerScore}
+    Computer: ${computerScore}`);
+  } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+    // add 1 point to the computer
+    computerScore++;
+    // print the feedback and current score of both the player and computer to thr console
+    console.log(`Computer win! Current Score:
+    Player: ${playerScore}
+    Computer: ${computerScore}`);
+  } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+    // add 1 point to the player
+    playerScore++;
+    // print the feedback and current score of both the player and computer to thr console
+    console.log(`You win! Current Score:
+    Player: ${playerScore}
+    Computer: ${computerScore}`);
+  } else if (playerSelection === 'paper' && computerSelection === `scissors`) {
+    // add 1 point to the computer
+    computerScore++;
+    // print the feedback and current score of both the player and computer to thr console
+    console.log(`Computer win! Current Score:
+    Player: ${playerScore}
+    Computer: ${computerScore}`);
+  } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+    // add 1 point to the player
+    playerScore++;
+    // print the feedback and current score of both the player and computer to thr console
+    console.log(`You win! Current Score:
+    Player: ${playerScore}
+    Computer: ${computerScore}`);
+  } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+    // add 1 point to the computer
+    computerScore++;
+    // print the feedback and current score of both the player and computer to thr console
+    console.log(`Computer win! Current Score:
+    Player: ${playerScore}
+    Computer: ${computerScore}`);
+  } else {
+    // if the player's choice is not in the choices list, it will not compare properly and will print the following message.
+    console.log('Invalid input');
+  }
+}
+
+// game() function will process the game
+function game() {
+  // set the number of rounds to 5
+  for (let i = 0; i < 5; i++) {
+    // let the player pick their choice
+    const playerChoice = prompt('Pick one of the following: Rock, Paper, Scissors?').toLowerCase();
+    // print the player's choice to the console
+    console.log(`Player choose ${playerChoice}`);
+    // call the computerPlay() function to let computer pick their choice
+    const computerChoice = computerPlay();
+    // print the computer's choice to the console
+    console.log(`Computer choose ${computerChoice}`);
+    // call the playRound() function to compare the player's choice against the computer's choice, provide the 2 parameters
+    playRound(playerChoice, computerChoice);
+  }
+  // Using the ternary operator to determine who win the game
+  const finalResult =
+    playerScore > computerScore
+      ? 'You win! Congratulations!'
+      : 'Computer wins! Better luck next time!';
+  // print the result of the game to the console
+  console.log(finalResult);
+}
+
+// call the game() function to start the game
+game();
