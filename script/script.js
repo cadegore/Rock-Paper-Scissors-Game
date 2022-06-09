@@ -1,3 +1,9 @@
+// to get the three selection buttons
+
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+
 /* This version of the Rock, Paper, and Scissors Game will only work in the console */
 
 /*
@@ -147,6 +153,18 @@ let playerScore = 0;
 // keep track of the score the computer received
 let computerScore = 0;
 
+function userPlay() {
+  rock.addEventListener('click', () => {
+    return 'rock';
+  });
+  paper.addEventListener('click', () => {
+    return 'paper';
+  });
+  scissors.addEventListener('click', () => {
+    return 'scissors';
+  });
+}
+
 // computerPlay() function will let computer randomly choose from the choices list
 function computerPlay() {
   const choices = ['rock', 'paper', 'scissors'];
@@ -211,8 +229,9 @@ function playRound(playerSelection, computerSelection) {
 
 // game() function will process the game
 function game() {
+  const playerChoice = userPlay();
   // let the player pick their choice
-  const playerChoice = prompt('Pick one of the following: Rock, Paper, Scissors?').toLowerCase();
+  // const playerChoice = prompt('Pick one of the following: Rock, Paper, Scissors?').toLowerCase();
   // print the player's choice to the console
   console.log(`Player choose ${playerChoice}`);
   // call the computerPlay() function to let computer pick their choice
