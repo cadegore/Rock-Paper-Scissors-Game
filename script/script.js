@@ -211,19 +211,17 @@ function playRound(playerSelection, computerSelection) {
 
 // game() function will process the game
 function game() {
-  // set the number of rounds to 5
-  for (let i = 0; i < 5; i++) {
-    // let the player pick their choice
-    const playerChoice = prompt('Pick one of the following: Rock, Paper, Scissors?').toLowerCase();
-    // print the player's choice to the console
-    console.log(`Player choose ${playerChoice}`);
-    // call the computerPlay() function to let computer pick their choice
-    const computerChoice = computerPlay();
-    // print the computer's choice to the console
-    console.log(`Computer choose ${computerChoice}`);
-    // call the playRound() function to compare the player's choice against the computer's choice, provide the 2 parameters
-    playRound(playerChoice, computerChoice);
-  }
+  // let the player pick their choice
+  const playerChoice = prompt('Pick one of the following: Rock, Paper, Scissors?').toLowerCase();
+  // print the player's choice to the console
+  console.log(`Player choose ${playerChoice}`);
+  // call the computerPlay() function to let computer pick their choice
+  const computerChoice = computerPlay();
+  // print the computer's choice to the console
+  console.log(`Computer choose ${computerChoice}`);
+  // call the playRound() function to compare the player's choice against the computer's choice, provide the 2 parameters
+  playRound(playerChoice, computerChoice);
+
   // Using the ternary operator to determine who win the game
   const finalResult =
     playerScore > computerScore
