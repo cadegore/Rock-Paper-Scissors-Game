@@ -1,8 +1,9 @@
-// to get the three selection buttons
+// to get the all the elements in HTML file
 
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
+const winnerMessage = document.getElementById('winner-message');
 
 /* This version of the Rock, Paper, and Scissors Game will only work in the console */
 
