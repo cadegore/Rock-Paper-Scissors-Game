@@ -1,11 +1,24 @@
+const startGame = document.getElementById('start-game-btn');
 const rock = document.getElementById('rock');
 const scissors = document.getElementById('scissors');
 const paper = document.getElementById('paper');
 const choiceMessage = document.getElementById('choiceMessage');
 const winnerMessage = document.getElementById('winnerMessage');
 const playAgain = document.getElementById('playAgain');
+const gameInstructions = document.querySelector('.game-direction');
+const gameRules = document.querySelector('.game-rules');
 
 const choice = ['rock', 'scissors', 'paper'];
+
+startGame.addEventListener('click', () => {
+  console.log('Game started');
+  startGame.classList.add('hidden');
+  gameInstructions.classList.add('hidden');
+  gameRules.classList.remove('hidden');
+  rock.classList.remove('hidden');
+  paper.classList.remove('hidden');
+  scissors.classList.remove('hidden');
+});
 
 rock.addEventListener('click', () => {
   let computerChoice = choice[Math.floor(Math.random() * choice.length)];

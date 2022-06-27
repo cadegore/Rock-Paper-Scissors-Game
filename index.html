@@ -3,19 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="script/script.js" defer></script>
   </head>
   <body>
-    <h1>Welcome to the rock paper scissors game!</h1>
-    <h2>Game Instructions:</h2>
-    <p>
-      To play the game, you need to click the button to choose your pick, and then after computer
-      pick its choice, the screen will display each other's choice and to determine who win the
-      game.
-    </p>
-    <button id="rock">Rock</button>
-    <button id="scissors">Scissors</button>
-    <button id="paper">Paper</button>
+    <div id="heading">
+      <h1>Rock, Paper, Scissors</h1>
+    </div>
+    <div class="game-direction">
+      <h2>Instructions</h2>
+      <p>Press "Start Game" to start the game</p>
+    </div>
+    <div class="game-rules hidden">
+      <h2>Rules</h2>
+      <p>Just a text</p>
+    </div>
+    <div class="start-game">
+      <button id="start-game-btn">Start Game</button>
+    </div>
+    <div class="player-choice">
+      <button id="rock" class="hidden">👊🏻</button>
+      <button id="scissors" class="hidden">✌🏻</button>
+      <button id="paper" class="hidden">🖐🏻</button>
+    </div>
     <div id="message">
       <p id="choiceMessage"></p>
       <p id="winnerMessage"></p>

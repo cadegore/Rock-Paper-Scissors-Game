@@ -1,0 +1,106 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 100px 300px;
+}
+
+#heading {
+  border: 5px solid #eafdee;
+  text-align: center;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+#heading h1 {
+  display: inline-block;
+  font-style: italic;
+  font-size: 50px;
+  background: linear-gradient(to right, #5cd5d7, #8ecb8e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* text-transform: uppercase; */
+}
+
+.game-direction,
+.game-rules {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #eafdee;
+  border-radius: 20px;
+}
+
+.game-direction h2,
+.game-rules h2 {
+  /* padding-left: 30px; */
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.game-direction p,
+.game-rules p {
+  font-size: 30px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.start-game {
+  display: flex;
+  margin: 40px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-game-btn {
+  font-size: 30px;
+  background-color: transparent;
+  color: white;
+  border: 5px solid white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#start-game-btn:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.player-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 50px;
+}
+
+#rock,
+#paper,
+#scissors {
+  font-size: 30px;
+  background-color: transparent;
+  color: white;
+  border: 5px solid white;
+  padding: 15px;
+  border-radius: 5px;
+  padding: 20px 50px;
+  font-size: 50px;
+}
+
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+#rock:disabled,
+#scissors:disabled,
+#paper:disabled {
+  background-color: red;
+  cursor: default;
+}
