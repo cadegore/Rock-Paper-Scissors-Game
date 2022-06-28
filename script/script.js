@@ -109,6 +109,8 @@ paper.addEventListener('click', () => {
 });
 
 playAgain.addEventListener('click', () => {
+  gameRules.classList.add('hidden');
+  gameInstructions.classList.remove('hidden');
   startGame.classList.remove('hidden');
   gameScreen.classList.add('hidden');
   winnerMessage.textContent = '';
